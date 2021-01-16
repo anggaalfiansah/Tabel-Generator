@@ -1,7 +1,6 @@
 // fungsi generate tabel
 function generateTabel() {
     let inputTabel = parseInt(document.getElementById("inputTabel").value);
-
     generate();
     function generate() {
         // Generate Tabel Pertama
@@ -55,10 +54,12 @@ function generateTabel() {
         btn = btn + `<button class='btn-lg btn-primary' onclick='hitung()'>Hitung</button>`;
         document.getElementById('hitung').innerHTML = btn;
     }
+    document.getElementById('hasil').hidden = true;
 }
 
 // fungsi untuk menghitung dan generate hasil penjumlahan 2 tabel diatas
 function hitung() {
+    document.getElementById('hasil').hidden = false;
     let inputTabel = parseInt(document.getElementById("inputTabel").value);
 
     let input1 = document.getElementsByName('inputArray1');
